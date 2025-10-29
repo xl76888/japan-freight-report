@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>日本集运业务重启方案计划</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+      margin: 0;
+      padding: 40px;
+      background: #f6f9fc;
+      color: #1f2a36;
+      line-height: 1.6;
+    }
+    header {
+      background: #ffffff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(31, 42, 54, 0.08);
+      margin-bottom: 32px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0 0 8px;
+      font-size: 32px;
+      letter-spacing: 1px;
+    }
+    header p {
+      margin: 0;
+      font-size: 16px;
+      color: #546173;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .section {
+      position: relative;
+      background: linear-gradient(180deg, #ffffff 0%, #f2f7ff 100%);
+      padding: 32px 36px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(31, 42, 54, 0.08);
+      border: 1px solid rgba(47, 128, 237, 0.08);
+    }
+    .section h2 {
+      margin-top: 0;
+      font-size: 24px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding-left: 0;
+    }
+    .section h2::before {
+      content: "";
+      width: 6px;
+      height: 28px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #2f80ed 0%, #56ccf2 100%);
+    }
+    .section h3 {
+      margin-bottom: 4px;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #2f80ed;
+    }
+    .grid {
+      display: grid;
+      gap: 24px;
+    }
+    .grid-2 {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .grid-3 {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    article {
+      position: relative;
+      background: linear-gradient(180deg, rgba(243, 247, 255, 0.95) 0%, #ffffff 100%);
+      padding: 20px 22px;
+      border-radius: 16px;
+      border: 1px solid rgba(47, 128, 237, 0.12);
+      box-shadow: 0 14px 28px rgba(31, 42, 54, 0.08);
+    }
+    article::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 22px;
+      right: 22px;
+      height: 4px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #2f80ed 0%, #56ccf2 100%);
+      opacity: 0.65;
+    }
+    article strong {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: #1f2a36;
+    }
+    ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    ul li::marker {
+      color: #2f80ed;
+    }
+    .figure-placeholder {
+      margin-top: 22px;
+      border: 1px dashed #a7b8cf;
+      border-radius: 12px;
+      padding: 18px 20px;
+      color: #6d7a8b;
+      background: rgba(167, 184, 207, 0.08);
+      font-size: 14px;
+    }
+    .compare-panels {
+      display: grid;
+      gap: 24px;
+      margin-top: 28px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .compare-card {
+      background: linear-gradient(180deg, rgba(243, 247, 255, 0.9) 0%, #ffffff 100%);
+      border-radius: 18px;
+      padding: 24px 26px;
+      border: 1px solid rgba(47, 128, 237, 0.12);
+      box-shadow: 0 18px 32px rgba(31, 42, 54, 0.08);
+    }
+    .compare-card h3 {
+      margin: 0 0 12px;
+      font-size: 16px;
+      color: #2f80ed;
+    }
+    .bar-chart {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .bar-row {
+      display: grid;
+      grid-template-columns: 130px 1fr auto;
+      align-items: center;
+      gap: 12px;
+    }
+    .bar-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #2f80ed;
+    }
+    .bar-track {
+      background: linear-gradient(90deg, rgba(86, 204, 242, 0.25) 0%, rgba(47, 128, 237, 0.12) 100%);
+      border-radius: 999px;
+      padding: 6px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      min-height: 18px;
+    }
+    .bar-fill {
+      height: 10px;
+      border-radius: 999px;
+    }
+    .bar-fill.bar-old {
+      background: #f2994a;
+    }
+    .bar-fill.bar-new {
+      background: #2f80ed;
+    }
+    .bar-value {
+      font-size: 12px;
+      color: #4f5b6a;
+      white-space: nowrap;
+    }
+    .pricing-card .metric-panel {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 12px;
+    }
+    .pricing-card .metric-box {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 14px 16px;
+      border: 1px solid rgba(47, 128, 237, 0.12);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+    }
+    .metric-title {
+      display: block;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #7a8898;
+      margin-bottom: 8px;
+    }
+    .metric-value-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #1f2a36;
+    }
+    .metric-value-row small {
+      font-size: 11px;
+      color: #7a8898;
+    }
+    .pricing-card .metric-chip-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+    .metric-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(47, 128, 237, 0.12);
+      color: #2f80ed;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .pricing-card .insight-list {
+      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 13px;
+      color: #4f5b6a;
+    }
+    .pricing-card .insight-list span::before {
+      content: "•";
+      margin-right: 6px;
+      color: #f2994a;
+    }
+    .image-gallery {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .image-card {
+      position: relative;
+      padding: 32px 28px;
+      border-radius: 24px;
+      background: radial-gradient(circle at 20% 20%, rgba(86, 204, 242, 0.25), transparent 55%), radial-gradient(circle at 80% 10%, rgba(155, 81, 224, 0.25), transparent 60%), linear-gradient(180deg, #1f2a36, #24364a);
+      color: #ffffff;
+      overflow: hidden;
+      box-shadow: 0 28px 48px rgba(18, 43, 74, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .image-card::after {
+      content: "";
+      position: absolute;
+      inset: 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      opacity: 0.6;
+    }
+    .image-card h3 {
+      position: relative;
+      font-size: 18px;
+      margin: 0 0 16px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .image-card .value {
+      position: relative;
+      font-size: 34px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .image-card .value span {
+      font-size: 16px;
+      font-weight: 500;
+      margin-left: 8px;
+      opacity: 0.8;
+    }
+    .image-card .meta {
+      position: relative;
+      font-size: 14px;
+      line-height: 1.8;
+      opacity: 0.9;
+    }
+    .image-card .tag-list {
+      position: relative;
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .image-card .tag {
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.16);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+    }
+    .strategy-card .strategy-columns {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .strategy-item {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 16px 18px;
+      border: 1px solid rgba(47, 128, 237, 0.12);
+      box-shadow: 0 10px 24px rgba(31, 42, 54, 0.06);
+    }
+    .strategy-item ul {
+      list-style: none;
+      margin: 0;
+      padding-left: 0;
+    }
+    .strategy-item li {
+      margin-bottom: 8px;
+      padding-left: 18px;
+      position: relative;
+    }
+    .strategy-item li::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2f80ed, #56ccf2);
+      box-shadow: 0 0 0 3px rgba(47, 128, 237, 0.15);
+    }
+    .strategy-heading {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #1f2a36;
+    }
+    .strategy-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      color: #ffffff;
+      box-shadow: 0 6px 12px rgba(47, 128, 237, 0.28);
+    }
+    .strategy-icon--warehouse {
+      background: linear-gradient(135deg, #f2994a, #f2c94c);
+    }
+    .strategy-icon--marketing {
+      background: linear-gradient(135deg, #9b51e0, #56ccf2);
+    }
+    .strategy-icon--product {
+      background: linear-gradient(135deg, #27ae60, #6fcf97);
+    }
+    .pricing-target-card {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .persona-grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .persona-card {
+      position: relative;
+      padding: 28px 24px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, #ffffff 0%, #f4f8ff 100%);
+      box-shadow: 0 20px 36px rgba(31, 42, 54, 0.1);
+      border: 1px solid rgba(47, 128, 237, 0.12);
+      overflow: hidden;
+    }
+    .persona-card::before {
+      content: "";
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(86, 204, 242, 0.3), transparent 60%);
+    }
+    .persona-card .persona-title {
+      position: relative;
+      font-size: 18px;
+      font-weight: 700;
+      color: #2f80ed;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .persona-card .persona-tags {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .persona-card .persona-tag {
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(47, 128, 237, 0.12);
+      color: #1f2a36;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+    }
+    .persona-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .persona-card li {
+      padding-left: 16px;
+      font-size: 13px;
+      color: #4f5b6a;
+      line-height: 1.6;
+      position: relative;
+    }
+    .persona-card li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #2f80ed;
+      box-shadow: 0 0 0 2px rgba(47, 128, 237, 0.25);
+    }
+    .persona-card .label {
+      font-weight: 600;
+      color: #1f2a36;
+      margin-right: 4px;
+    }
+    .timeline-title {
+      margin-top: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #1f2a36;
+    }
+    .horizontal-timeline {
+      position: relative;
+      margin-top: 12px;
+      padding-top: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .horizontal-timeline::before {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, rgba(47, 128, 237, 0.8) 0%, rgba(47, 128, 237, 0.1) 100%);
+    }
+    .timeline-stage {
+      position: relative;
+      flex: 1 1 220px;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 16px 18px;
+      border: 1px solid rgba(47, 128, 237, 0.14);
+      box-shadow: 0 10px 24px rgba(31, 42, 54, 0.08);
+    }
+    .timeline-stage .timeline-dot {
+      position: absolute;
+      top: -24px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #f2994a;
+      border: 3px solid #ffffff;
+      box-shadow: 0 0 0 2px rgba(47, 128, 237, 0.35);
+    }
+    .timeline-stage .timeline-label {
+      text-align: center;
+      font-weight: 600;
+      color: #2f80ed;
+      margin-bottom: 6px;
+    }
+    .timeline-stage .timeline-metric {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 700;
+      color: #1f2a36;
+    }
+    .timeline-stage .timeline-meta {
+      text-align: center;
+      font-size: 12px;
+      color: #7a8898;
+    }
+    .timeline-stage .timeline-note {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #4f5b6a;
+      text-align: left;
+    }
+    .timeline-stage.stage-summary {
+      background: rgba(242, 153, 74, 0.12);
+      border: 1px dashed rgba(242, 153, 74, 0.45);
+      color: #b8611e;
+    }
+    .timeline-stage.stage-summary .timeline-label,
+    .timeline-stage.stage-summary .timeline-metric {
+      color: #b8611e;
+    }
+    .timeline-stage.stage-summary .timeline-meta {
+      color: #d97330;
+    }
+    .timeline-stage.stage-summary .timeline-dot {
+      background: #eb8c2f;
+      box-shadow: 0 0 0 2px rgba(235, 140, 47, 0.35);
+    }
+    .timeline-stage.stage-summary .timeline-note {
+      color: #b8611e;
+    }
+    .note {
+      margin-top: 12px;
+      font-size: 12px;
+      color: #7a8898;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 14px;
+      background: #ffffff;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 16px 28px rgba(31, 42, 54, 0.08);
+    }
+    th, td {
+      border: 1px solid #d9e2f2;
+      padding: 10px 12px;
+      text-align: left;
+    }
+    th {
+      background: linear-gradient(180deg, #eef4ff 0%, #d9e7ff 100%);
+      font-weight: 600;
+    }
+    tr:nth-child(even) td {
+      background: rgba(47, 128, 237, 0.04);
+    }
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 13px;
+      color: #7a8898;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>日本集运业务重启方案计划</h1>
+    <p>复盘 · 策略 · 执行计划 · 预期</p>
+  </header>
+
+  <main>
+    <section class="section">
+      <h2>历史复盘</h2>
+      <div class="grid grid-3">
+        <article>
+          <strong>固定成本过重</strong>
+          <ul>
+            <li>自营仓房租 + 人工刚性高</li>
+            <li>8 个月亏损累计 75.4 万</li>
+            <li>单量波动即放大亏损</li>
+          </ul>
+        </article>
+        <article>
+          <strong>营销渠道投放错位</strong>
+          <ul>
+            <li>预算集中国内平台，漏打日本华人圈</li>
+            <li>链路长、转化弱、获客成本高</li>
+            <li>投入产出比低，复购乏力</li>
+          </ul>
+        </article>
+        <article>
+          <strong>营销定价与成本倒挂</strong>
+          <ul>
+            <li>EMS 成本 302 元 / 单 > 结算价 282 元 / 单</li>
+            <li>成本监控与前台联动弱</li>
+            <li>高峰期易出现“越忙越亏”</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>重启策略一览</h2>
+      <div class="grid grid-2" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+        <article class="strategy-card">
+          <strong>仓储・获客・产品协同</strong>
+          <div class="strategy-columns">
+            <div class="strategy-item">
+              <div class="strategy-heading">
+                <span class="strategy-icon strategy-icon--warehouse">仓</span>
+                <span>仓储外包</span>
+              </div>
+              <ul>
+                <li>采用 50 ㎡ 起步的第三方仓，按单计费</li>
+                <li>触发阈值扩容 100 ㎡，配合 KPI/SOP 管控</li>
+                <li>刚性“房租 + 人工”转为“仓租 + 作业费”随量支出</li>
+              </ul>
+            </div>
+            <div class="strategy-item">
+              <div class="strategy-heading">
+                <span class="strategy-icon strategy-icon--marketing">客</span>
+                <span>本地化获客</span>
+              </div>
+              <ul>
+                <li>聚焦日本本地媒体、华人社群与线下商户</li>
+                <li>分成合作 + 站外曝光，缩短链路提升转化</li>
+                <li>校园 / 企业联合活动增强复购与口碑</li>
+              </ul>
+            </div>
+            <div class="strategy-item">
+              <div class="strategy-heading">
+                <span class="strategy-icon strategy-icon--product">产</span>
+                <span>产品多样化</span>
+              </div>
+              <ul>
+                <li>EMS 负责敏感件 / 急件，保障时效与服务</li>
+                <li>普货专线承接中重货，突出价格竞争力</li>
+                <li>海运线路解决大件 / 带磁带电货合规运输</li>
+                <li>前端一键试算，体积重与禁限品规则透明</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="pricing-card pricing-target-card">
+          <strong>定价结构与预期目标</strong>
+          <div class="metric-panel">
+            <div class="metric-box">
+              <span class="metric-title">邮政结算价</span>
+              <div class="metric-value-row">
+                <span>首 0.5 kg</span>
+                <span>41.4 元</span>
+              </div>
+              <div class="metric-value-row">
+                <span>续 0.5 kg</span>
+                <span>9.6 元</span>
+              </div>
+              <div class="metric-value-row">
+                <small>含报关、燃油等基础费用</small>
+              </div>
+            </div>
+            <div class="metric-box">
+              <span class="metric-title">对外阶梯价</span>
+              <div class="metric-chip-group">
+                <span class="metric-chip">0.5–10 kg：首 75 / 续 18</span>
+                <span class="metric-chip">10.1–21 kg：27 元/kg（VIP 26）</span>
+                <span class="metric-chip">22.1–30 kg：26 元/kg（VIP 25）</span>
+              </div>
+            </div>
+          </div>
+          <div class="insight-list">
+            <span>建立毛利预警机制，重货导流至专线 / 海运确保整体毛差</span>
+            <span>上线一键试算工具，体积重 &amp; 禁限品教育标准化，降低售后争议</span>
+          </div>
+          <div class="timeline-title">阶段节奏</div>
+          <div class="horizontal-timeline">
+            <div class="timeline-stage">
+              <span class="timeline-dot"></span>
+              <div class="timeline-label">M1 – M3</div>
+              <div class="timeline-metric">400 单 / 月</div>
+              <div class="timeline-meta">13.3 单 / 日</div>
+              <p class="timeline-note">验证外包仓流程与首批渠道投放，打牢服务体验。</p>
+            </div>
+            <div class="timeline-stage">
+              <span class="timeline-dot"></span>
+              <div class="timeline-label">M4 – M6</div>
+              <div class="timeline-metric">620 单 / 月</div>
+              <div class="timeline-meta">20.7 单 / 日</div>
+              <p class="timeline-note">扩展本地媒体与社群合作，优化成本结构与毛利。</p>
+            </div>
+            <div class="timeline-stage">
+              <span class="timeline-dot"></span>
+              <div class="timeline-label">M7 – M12</div>
+              <div class="timeline-metric">890 单 / 月</div>
+              <div class="timeline-meta">29.7 单 / 日</div>
+              <p class="timeline-note">塑造会员与复购体系，持续提升 ROI 与客户满意度。</p>
+            </div>
+            <div class="timeline-stage stage-summary">
+              <span class="timeline-dot"></span>
+              <div class="timeline-label">全年</div>
+              <div class="timeline-metric">月均 695 单</div>
+              <div class="timeline-meta">全年 8,400 单</div>
+              <p class="timeline-note">利润目标 ≥ 70 万，KPI 聚焦投放 ROI、客诉率、订单及时率。</p>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="compare-panels">
+        <div class="compare-card">
+          <h3>仓储成本结构对比</h3>
+          <div class="bar-chart">
+            <div class="bar-row">
+              <div class="bar-label">自营仓</div>
+              <div class="bar-track">
+                <div class="bar-fill bar-old" style="width:100%;"></div>
+              </div>
+              <div class="bar-value">约 9.4 万/月*</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">外包仓（50 ㎡）</div>
+              <div class="bar-track">
+                <div class="bar-fill bar-new" style="width:63%;"></div>
+              </div>
+              <div class="bar-value">5.94 万/月</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">外包仓（100 ㎡）</div>
+              <div class="bar-track">
+                <div class="bar-fill bar-new" style="width:65%;"></div>
+              </div>
+              <div class="bar-value">6.09 万/月</div>
+            </div>
+          </div>
+          <p class="note">*估算基于自营仓 8 个月累计亏损 75.4 万折算的月均固定支出。</p>
+        </div>
+      <div class="compare-card">
+        <h3>EMS 成本价对比（首/续 0.5kg）</h3>
+        <div class="bar-chart">
+          <div class="bar-row">
+            <div class="bar-label">首重 0.5 kg</div>
+              <div class="bar-track">
+                <div class="bar-fill bar-old" style="width:100%;"></div>
+                <div class="bar-fill bar-new" style="width:69%;"></div>
+              </div>
+              <div class="bar-value">历史 60.00 元 → 新 41.40 元</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">续重 0.5 kg</div>
+              <div class="bar-track">
+                <div class="bar-fill bar-old" style="width:92%;"></div>
+                <div class="bar-fill bar-new" style="width:80%;"></div>
+              </div>
+              <div class="bar-value">历史 11.01 元 → 新 9.60 元</div>
+            </div>
+        </div>
+        <p class="note">降幅：首重 ↓31%，续重 ↓12.8%；数据来源于历史报表与新邮政结算。</p>
+      </div>
+    </div>
+  </section>
+
+    <section class="section">
+      <h2>市场机会洞察</h2>
+      <div class="image-gallery">
+        <figure class="image-card">
+          <h3>在日中国籍规模</h3>
+          <div class="value">87.3<span>万在留居民</span></div>
+          <div class="meta">
+            中长期在留 87.15 万；留学生 14.14 万。<br>
+            人群拆分：留学生 & 中长期 & 在留。
+          </div>
+          <div class="tag-list">
+            <span class="tag">日本在留管理厅.法务省</span>
+            <span class="tag">日本出入国在留管理庁</span>
+            <span class="tag">年末统计</span>
+          </div>
+        </figure>
+        <figure class="image-card">
+          <h3>大都市圈优先｜3 个核心圈层</h3>
+          <div class="value">首都圈・关西圈・中京圈</div>
+          <div class="meta">
+            首都圈：东京都・神奈川县・千叶县・埼玉县。<br>
+            关西圈：大阪府・京都府・兵库县（可选：奈良・滋贺・和歌山）。<br>
+            中京圈：爱知县・岐阜县・三重县。
+          </div>
+          <div class="tag-list">
+            <span class="tag">TOP 区域</span>
+            <span class="tag">优先覆盖</span>
+          </div>
+        </figure>
+        <figure class="image-card">
+          <h3>投放布点建议</h3>
+          <div class="value">4<span>类触点</span></div>
+          <div class="meta">
+            本地媒体投放与华人社群覆盖；校园地推 + 留学生渠道；<br>
+            华人企业/社区商圈联合；定期更新 e‑Stat 数据闭环投放 → 下单 → 复购。
+          </div>
+          <div class="tag-list">
+            <span class="tag">本地媒体</span>
+            <span class="tag">校园社群</span>
+            <span class="tag">华人企业</span>
+            <span class="tag">社区商圈</span>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>用户画像与需求映射</h2>
+      <div class="persona-grid">
+        <article class="persona-card">
+          <div class="persona-title">留学生</div>
+          <div class="persona-tags">
+            <span class="persona-tag">价格透明</span>
+            <span class="persona-tag">校园触达</span>
+          </div>
+          <ul>
+            <li><span class="label">核心需求：</span>地址簿便捷、寝室上门揽收</li>
+            <li><span class="label">典型货物：</span>食品、衣物、电子配件、小电器、日用品</li>
+            <li><span class="label">时效/价格：</span>节前/毕业季峰值，时效中等</li>
+            <li><span class="label">敏感/普货：</span>约 4 / 6</li>
+            <li><span class="label">推荐线路：</span>EMS（小件/急件）≤30kg；普货专线接力</li>
+            <li><span class="label">触点：</span>校园社团、留学群、小春网</li>
+          </ul>
+        </article>
+        <article class="persona-card">
+          <div class="persona-title">白领 / 家庭</div>
+          <div class="persona-tags">
+            <span class="persona-tag">服务稳定</span>
+            <span class="persona-tag">高复购</span>
+          </div>
+          <ul>
+            <li><span class="label">核心需求：</span>时效稳定、理赔清晰、客服响应快</li>
+            <li><span class="label">典型货物：</span>礼品、食品、母婴、保健品、家居小件/大件</li>
+            <li><span class="label">时效/价格：</span>偏好稳定时效 > 极致低价</li>
+            <li><span class="label">敏感/普货：</span>约 6 / 4</li>
+            <li><span class="label">推荐线路：</span>EMS（敏感/急件），普货专线组合</li>
+            <li><span class="label">触点：</span>华人媒体、社区群、线下合作门店</li>
+          </ul>
+        </article>
+        <article class="persona-card">
+          <div class="persona-title">个体经营者</div>
+          <div class="persona-tags">
+            <span class="persona-tag">批量寄送</span>
+            <span class="persona-tag">价格敏感</span>
+          </div>
+          <ul>
+            <li><span class="label">核心需求：</span>低单价、批量寄、轨迹透明</li>
+            <li><span class="label">典型货物：</span>普货批量、活动礼盒/物料、生活用品</li>
+            <li><span class="label">时效/价格：</span>对价格更敏感，接受较长时效</li>
+            <li><span class="label">敏感/普货：</span>普货占比高</li>
+            <li><span class="label">推荐线路：</span>专线（10–30kg）、海运（大件/带磁带电）</li>
+            <li><span class="label">触点：</span>社群分销、渠道合作、商协会</li>
+          </ul>
+        </article>
+        <article class="persona-card">
+          <div class="persona-title">短期访日 / 探亲</div>
+          <div class="persona-tags">
+            <span class="persona-tag">操作简单</span>
+            <span class="persona-tag">上门揽收</span>
+          </div>
+          <ul>
+            <li><span class="label">核心需求：</span>时效要求</li>
+            <li><span class="label">典型货物：</span>行李、衣物、土特产</li>
+            <li><span class="label">时效/价格：</span>对价格不敏感，对时效有要求</li>
+            <li><span class="label">敏感/普货：</span>普货占比高</li>
+            <li><span class="label">推荐线路：</span>海运（大件/超体积）、EMS（小件急件）</li>
+            <li><span class="label">触点：</span>机场/酒店合作、旅行社群</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>获客路径设计</h2>
+      <div class="grid grid-2">
+        <article>
+          <strong>渠道组合</strong>
+          <ul>
+            <li>日本华人媒体 &amp; 站外广告</li>
+            <li>线下合作门店 / 社群分成</li>
+            <li>校园推广、企业礼包合作</li>
+          </ul>
+        </article>
+        <article>
+          <strong>用户旅程</strong>
+          <ul>
+            <li>种草曝光 → 互动咨询 → 下单 → 复购</li>
+            <li>客服质检节点强化服务体验</li>
+            <li>会员权益推动复购率</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>运营能力升级</h2>
+      <div class="grid grid-2">
+        <article>
+          <strong>仓内流程</strong>
+          <ul>
+            <li>第三方仓 SOP：收货、质检、打包、出库</li>
+            <li>统一 KPI：订单准时率、破损率、客服响应</li>
+            <li>系统化对接，实时库存与费用监控</li>
+          </ul>
+        </article>
+        <article>
+          <strong>定价与成本监控</strong>
+          <ul>
+            <li>EMS 阶梯价与前台定价联动</li>
+            <li>建立体积重试算工具</li>
+            <li>定期复盘毛利率，异常票据追溯</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>资源投入 &amp; 执行节奏</h2>
+      <h3>预算拆解（万元 / 月）</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>项目</th>
+            <th>说明</th>
+            <th>费用</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>媒体投放</td>
+            <td>日本本地媒体 / 社群 / 站外广告</td>
+            <td>4.96</td>
+          </tr>
+          <tr>
+            <td>系统工具</td>
+            <td>集运系统、支付渠道、域名证书、公众号、小程序</td>
+            <td>0.33</td>
+          </tr>
+          <tr>
+            <td>物料耗材</td>
+            <td>纸箱、胶带、填充物、损耗备件</td>
+            <td>0.50</td>
+          </tr>
+          <tr>
+            <td>仓租（50 ㎡）</td>
+            <td>外包仓场地含基础物业能耗</td>
+            <td>0.15</td>
+          </tr>
+          <tr>
+            <td><strong>合计</strong></td>
+            <td></td>
+            <td><strong>5.94</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>执行时间线</h3>
+      <div class="timeline">
+        <div class="timeline-step">
+          <strong>阶段 1：准备（1-2 周）</strong>
+          <div>敲定外包仓合同、完善 SOP、制作营销素材。</div>
+        </div>
+        <div class="timeline-step">
+          <strong>阶段 2：试运营（4 周）</strong>
+          <div>局部投放验证，监控毛利、履约、客服指标。</div>
+        </div>
+        <div class="timeline-step">
+          <strong>阶段 3：放量扩张（8 周）</strong>
+          <div>扩大渠道、优化组合，月度复盘 ROI 与成本。</div>
+        </div>
+        <div class="timeline-step">
+          <strong>阶段 4：巩固优化（持续）</strong>
+          <div>引入会员体系、跨界合作、持续降本增效。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>盈利目标</h2>
+      <div class="grid grid-2">
+        <article>
+          <strong>年度测算</strong>
+          <ul>
+            <li>目标单量：8,400 单 / 年</li>
+            <li>营收：417 元 × 8,400 = 350.28 万</li>
+            <li>利润：≈ 74.75 万（50 ㎡ 场景）</li>
+            <li>利润：≈ 72.95 万（100 ㎡ 场景）</li>
+          </ul>
+        </article>
+        <article>
+          <strong>单票毛利示例（10 kg）</strong>
+          <ul>
+            <li>收入：417 元 / 单</li>
+            <li>成本：邮政 + 仓内 ≈ 243.15 元 / 单</li>
+            <li>毛利：≈ 173.85 元 / 单</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>关键风险与应对</h2>
+      <div class="grid grid-2">
+        <article>
+          <strong>合规与品质</strong>
+          <ul>
+            <li>禁限品教育标准化、签署免责声明</li>
+            <li>外包仓考核：破损率、投诉率、出库时效</li>
+            <li>应急预案：线路拥堵、渠道价格波动</li>
+          </ul>
+        </article>
+        <article>
+          <strong>业务指标</strong>
+          <ul>
+            <li>投放产出比与获客成本月度追踪</li>
+            <li>现金流监控，设置警戒线</li>
+            <li>客户满意度与复购率双 KPI</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>附录与数据来源</h2>
+      <ul>
+        <li>历史经营报表、仓库费用清单（固定成本依赖）</li>
+        <li>投放报表、来源分析（渠道投放决策）</li>
+        <li>EMS 价格表、客服工单（定价与客户反馈）</li>
+        <li>内部测算模型（营收、毛利、利润假设）</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    数据来源：历史经营报表、内部测算、渠道试点反馈（2024-Q4）。
+  </footer>
+</body>
+</html>
