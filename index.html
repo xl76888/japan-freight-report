@@ -373,6 +373,77 @@
       flex-direction: column;
       gap: 16px;
     }
+    .strategy-timeline {
+      margin-top: 28px;
+      padding-top: 12px;
+      border-top: 1px dashed rgba(47, 128, 237, 0.2);
+    }
+    .profit-grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(2, minmax(260px, 1fr));
+    }
+    .profit-card {
+      background: linear-gradient(180deg, rgba(47, 128, 237, 0.12), rgba(33, 79, 134, 0.08));
+      border-radius: 18px;
+      padding: 20px 22px;
+      border: 1px solid rgba(47, 128, 237, 0.18);
+      box-shadow: 0 16px 30px rgba(31, 42, 54, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .profit-card h4 {
+      margin: 0;
+      font-size: 16px;
+      color: #1f2a36;
+    }
+    .profit-card .subtitle {
+      font-size: 13px;
+      color: #2f80ed;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .profit-card ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .profit-item {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .profit-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #4f5b6a;
+    }
+    .profit-bar-track {
+      position: relative;
+      width: 100%;
+      height: 8px;
+      border-radius: 999px;
+      background: rgba(47, 128, 237, 0.12);
+      overflow: hidden;
+    }
+    .profit-bar-fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #56ccf2, #2f80ed);
+    }
+    @media (max-width: 1100px) {
+      .profit-grid {
+        grid-template-columns: 1fr;
+      }
+    }
     .persona-grid {
       display: grid;
       gap: 24px;
@@ -652,6 +723,39 @@
               </ul>
             </div>
           </div>
+          <div class="strategy-timeline">
+            <div class="timeline-title">阶段节奏</div>
+            <div class="horizontal-timeline">
+              <div class="timeline-stage">
+                <span class="timeline-dot"></span>
+                <div class="timeline-label">M1 – M3</div>
+                <div class="timeline-metric">400 单 / 月</div>
+                <div class="timeline-meta">13.3 单 / 日</div>
+                <p class="timeline-note">验证外包仓流程与首批渠道投放，打牢服务体验。</p>
+              </div>
+              <div class="timeline-stage">
+                <span class="timeline-dot"></span>
+                <div class="timeline-label">M4 – M6</div>
+                <div class="timeline-metric">620 单 / 月</div>
+                <div class="timeline-meta">20.7 单 / 日</div>
+                <p class="timeline-note">扩展本地媒体与社群合作，优化成本结构与毛利。</p>
+              </div>
+              <div class="timeline-stage">
+                <span class="timeline-dot"></span>
+                <div class="timeline-label">M7 – M12</div>
+                <div class="timeline-metric">890 单 / 月</div>
+                <div class="timeline-meta">29.7 单 / 日</div>
+                <p class="timeline-note">塑造会员与复购体系，持续提升 ROI 与客户满意度。</p>
+              </div>
+              <div class="timeline-stage stage-summary">
+                <span class="timeline-dot"></span>
+                <div class="timeline-label">全年</div>
+                <div class="timeline-metric">月均 695 单</div>
+                <div class="timeline-meta">全年 8,400 单</div>
+                <p class="timeline-note">利润目标 ≥ 70 万，KPI 聚焦投放 ROI、客诉率、订单及时率。</p>
+              </div>
+            </div>
+          </div>
         </article>
         <article class="pricing-card pricing-target-card">
           <strong>定价结构与预期目标</strong>
@@ -671,7 +775,7 @@
               </div>
             </div>
             <div class="metric-box">
-              <span class="metric-title">对外阶梯价</span>
+              <span class="metric-title">对标市场产品售价</span>
               <div class="metric-chip-group">
                 <span class="metric-chip">0.5–10 kg：首 75 / 续 18</span>
                 <span class="metric-chip">10.1–21 kg：27 元/kg（VIP 26）</span>
@@ -680,38 +784,88 @@
             </div>
           </div>
           <div class="insight-list">
-            <span>建立毛利预警机制，重货导流至专线 / 海运确保整体毛差</span>
-            <span>上线一键试算工具，体积重 &amp; 禁限品教育标准化，降低售后争议</span>
+            <span>EMS产品阶梯价格测算单票盈亏率</span>
           </div>
-          <div class="timeline-title">阶段节奏</div>
-          <div class="horizontal-timeline">
-            <div class="timeline-stage">
-              <span class="timeline-dot"></span>
-              <div class="timeline-label">M1 – M3</div>
-              <div class="timeline-metric">400 单 / 月</div>
-              <div class="timeline-meta">13.3 单 / 日</div>
-              <p class="timeline-note">验证外包仓流程与首批渠道投放，打牢服务体验。</p>
+          <div class="profit-grid">
+            <div class="profit-card">
+              <h4>10.1–21 kg｜27 元/kg</h4>
+              <div class="subtitle">标准价测算</div>
+              <ul>
+                <li class="profit-item">
+                  <div class="profit-label"><span>10.1 kg</span><span>盈亏/单 39.3 元｜14.4%</span></div>
+                  <div class="profit-bar-track"><div class="profit-bar-fill" style="width:14.4%;"></div></div>
+                </li>
+                <li class="profit-item">
+                  <div class="profit-label"><span>15.0 kg</span><span>盈亏/单 85.2 元｜21.0%</span></div>
+                  <div class="profit-bar-track"><div class="profit-bar-fill" style="width:21%;"></div></div>
+                </li>
+                <li class="profit-item">
+                  <div class="profit-label"><span>20.0 kg</span><span>盈亏/单 124.2 元｜23.0%</span></div>
+                  <div class="profit-bar-track"><div class="profit-bar-fill" style="width:23%;"></div></div>
+                </li>
+                <li class="profit-item">
+                  <div class="profit-label"><span>21.0 kg</span><span>盈亏/单 132.0 元｜23.3%</span></div>
+                  <div class="profit-bar-track"><div class="profit-bar-fill" style="width:23.3%;"></div></div>
+                </li>
+              </ul>
             </div>
-            <div class="timeline-stage">
-              <span class="timeline-dot"></span>
-              <div class="timeline-label">M4 – M6</div>
-              <div class="timeline-metric">620 单 / 月</div>
-              <div class="timeline-meta">20.7 单 / 日</div>
-              <p class="timeline-note">扩展本地媒体与社群合作，优化成本结构与毛利。</p>
+            <div class="profit-card">
+              <h4>10.1–21 kg｜VIP 26 元/kg</h4>
+              <div class="subtitle">会员优惠测算</div>
+              <ul>
+                <li class="profit-item">
+                  <div class="profit-label"><span>10.1 kg</span><span>盈亏/单 29.2 元｜11.1%</span></div>
+                  <div class="profit-bar-track"><div class="profit-bar-fill" style="width:11.1%;"></div></div>
+                </li>
+                <li class="profit-item">
+                  <div class="profit-label"><span>15.0 kg</span><span>盈亏/单 70.2 元｜18.0%</span></div>
+                  <div class="profit-bar-track"><div class="profit-bar-fill" style="width:18%;"></div></div>
+                </li>
+                <li class="profit-item">
+                  <div class="profit-label"><span>20.0 kg</span><span>盈亏/单 104.2 元｜20.0%</span></div>
+                  <div class="profit-bar-track"><div class="profit-bar-fill" style="width:20%;"></div></div>
+                </li>
+                <li class="profit-item">
+                  <div class="profit-label"><span>21.0 kg</span><span>盈亏/单 111.0 元｜20.3%</span></div>
+                  <div class="profit-bar-track"><div class="profit-bar-fill" style="width:20.3%;"></div></div>
+                </li>
+              </ul>
             </div>
-            <div class="timeline-stage">
-              <span class="timeline-dot"></span>
-              <div class="timeline-label">M7 – M12</div>
-              <div class="timeline-metric">890 单 / 月</div>
-              <div class="timeline-meta">29.7 单 / 日</div>
-              <p class="timeline-note">塑造会员与复购体系，持续提升 ROI 与客户满意度。</p>
+            <div class="profit-card">
+              <h4>22.1–30 kg｜26 元/kg</h4>
+              <div class="subtitle">标准价测算</div>
+              <ul>
+                <li class="profit-item">
+                  <div class="profit-label"><span>22.1 kg</span><span>盈亏/单 110.8 元｜19.3%</span></div>
+                  <div class="profit-bar-track"><div class="profit-bar-fill" style="width:19.3%;"></div></div>
+                </li>
+                <li class="profit-item">
+                  <div class="profit-label"><span>25.0 kg</span><span>盈亏/单 138.2 元｜21.3%</span></div>
+                  <div class="profit-bar-track"><div class="profit-bar-fill" style="width:21.3%;"></div></div>
+                </li>
+                <li class="profit-item">
+                  <div class="profit-label"><span>30.0 kg</span><span>盈亏/单 172.2 元｜22.1%</span></div>
+                  <div class="profit-bar-track"><div class="profit-bar-fill" style="width:22.1%;"></div></div>
+                </li>
+              </ul>
             </div>
-            <div class="timeline-stage stage-summary">
-              <span class="timeline-dot"></span>
-              <div class="timeline-label">全年</div>
-              <div class="timeline-metric">月均 695 单</div>
-              <div class="timeline-meta">全年 8,400 单</div>
-              <p class="timeline-note">利润目标 ≥ 70 万，KPI 聚焦投放 ROI、客诉率、订单及时率。</p>
+            <div class="profit-card">
+              <h4>22.1–30 kg｜VIP 25 元/kg</h4>
+              <div class="subtitle">会员优惠测算</div>
+              <ul>
+                <li class="profit-item">
+                  <div class="profit-label"><span>22.1 kg</span><span>盈亏/单 88.7 元｜16.1%</span></div>
+                  <div class="profit-bar-track"><div class="profit-bar-fill" style="width:16.1%;"></div></div>
+                </li>
+                <li class="profit-item">
+                  <div class="profit-label"><span>25.0 kg</span><span>盈亏/单 113.2 元｜18.1%</span></div>
+                  <div class="profit-bar-track"><div class="profit-bar-fill" style="width:18.1%;"></div></div>
+                </li>
+                <li class="profit-item">
+                  <div class="profit-label"><span>30.0 kg</span><span>盈亏/单 142.2 元｜19.0%</span></div>
+                  <div class="profit-bar-track"><div class="profit-bar-fill" style="width:19%;"></div></div>
+                </li>
+              </ul>
             </div>
           </div>
         </article>
